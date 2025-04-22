@@ -8,17 +8,20 @@ const func = async () => {
   
   func()
 
-// const { Notification } = require('electron')
+  const NOTIFICATION_TITLE = 'Basic Notification'
+  const NOTIFICATION_BODY = 'Notification from the Render process'
+  
+  // function showNotification() {
+  //   electronAPI.showNotification(NOTIFICATION_TITLE, NOTIFICATION_BODY)
+  //   console.log("Notification sent!");
+  // }
+  
+  // document.getElementById("notifyBtn").addEventListener("click", () => {
+  //   console.log("notifyBtn clicked");
+  //   showNotification(); // your notification function
+  // });
 
-// const NOTIFICATION_TITLE = 'Basic Notification'
-// const NOTIFICATION_BODY = 'Notification from the Main process'
-
-// new Notification({
-//   title: NOTIFICATION_TITLE,
-//   body: NOTIFICATION_BODY
-// }).show()
-
-// function showNotification() {
-//   console.log("notification done");
-//   new Notification({ title: NOTIFICATION_TITLE, body: NOTIFICATION_BODY }).show()
-// }
+  document.getElementById("notifyBtn").addEventListener("click", () => {
+    console.log("Notification sent!");
+    new Notification(NOTIFICATION_TITLE, { body: NOTIFICATION_BODY })
+  });
