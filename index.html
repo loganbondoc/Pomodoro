@@ -10,14 +10,21 @@
       http-equiv="X-Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
     />
-    <title>Hello from Electron renderer!</title>
+    <title>Pomodoro v1</title>
   </head>
   <body>
-    <h1>Hello from Electron renderer!</h1>
-    <p>👋</p>
-    <p id="info"></p>
+    <h1>Pomodoro Prototype</h1>
+    <span id="pomodoroCounter">0</span>
     <button id="notifyBtn">Notify</button>
+    <p id="timerDisplay">05:00</p>
+    <div>
+      <button class="durationBtn" data-time="0.5">5 Minutes</button>
+      <button class="durationBtn" data-time="10">10 Minutes</button>
+      <button class="durationBtn" data-time="15">15 Minutes</button>
+    </div>
+    <button id="timerBtn">Start 5-Minute Timer</button>
   </body>
   <script src="./renderer.js"></script>
+  <script src="./scripts/timer.js"></script>
   <!-- <script src="notification.js"></script> -->
 </html>
